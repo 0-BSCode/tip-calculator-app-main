@@ -1,16 +1,14 @@
 import React from 'react'
 import {useState, useEffect} from 'react'
 import TipButton from './TipButton'
-import Input from './Input'
+import PeopleInput from './PeopleInput'
+import BillInput from './BillInput'
+import PercentInput from './PercentInput'
 
-const Form = ({ changeOutput }) => {
-  
-  const [bill, setBill] = useState('');
-  const [percent, setPercent] = useState('NaN');
-  const [percentCustom, setPercentCustom] = useState('');
-  const [people, setPeople] = useState('');
-
-  useEffect(()=>{changeOutput(bill, percent, people)});
+const Form = ({ Bill, getBill, 
+                Percent, getPercent, 
+                People, getPeople,
+                tipNumber, getTipNumber }) => {
 
   return (
     <form
@@ -18,39 +16,24 @@ const Form = ({ changeOutput }) => {
         <div className="card__form-section">
             <label>Bill</label>
             <br/>
-            <Input 
-            className="card__form-bill"
-            value={bill}
-            changeValue={setBill} />
+            <BillInput Bill={Bill} getBill={getBill} />
         </div>
         <div className="card__form-btns">
             <label>Select Tip %</label>
             <br/>
             <div className="card__tip-btns">
-                <TipButton content="5" changePercent={setPercent} />
-                <TipButton content="10" changePercent={setPercent} />
-                <TipButton content="15" changePercent={setPercent} />
-                <TipButton content="25" changePercent={setPercent} />
-                <TipButton content="50" changePercent={setPercent} />
-                <input
-                className="card__tip-btn card__tip-btn--custom"
-                type="text"
-                placeholder="Custom"
-                value={percentCustom}
-                onChange={(e) => {
-                    setPercentCustom(e.target.value === '' ? '': e.target.value);
-                    setPercent(e.target.value === '' ? 'NaN': e.target.value);
-                }}/>
+                <TipButton id={1} content="5" getPercent={getPercent} tipNumber={tipNumber} getTipNumber={getTipNumber}/>
+                <TipButton id={2} content="10" getPercent={getPercent} tipNumber={tipNumber} getTipNumber={getTipNumber}/>
+                <TipButton id={3} content="15" getPercent={getPercent} tipNumber={tipNumber} getTipNumber={getTipNumber}/>
+                <TipButton id={4} content="25" getPercent={getPercent} tipNumber={tipNumber} getTipNumber={getTipNumber}/>
+                <TipButton id={5} content="50" getPercent={getPercent} tipNumber={tipNumber} getTipNumber={getTipNumber}/>
+                <PercentInput id={6} Percent={Percent} getPercent={getPercent} tipNumber={tipNumber} getTipNumber={getTipNumber}/>
             </div>
         </div>
         <div className="card__form-section">
             <label>Number of People</label>
             <br/>
-            <Input 
-            className="card__form-people"
-            value={people}
-            changeValue={setPeople} 
-            checkForZero={true} />
+            <PeopleInput People={People} getPeople={getPeople} />
         </div>
     </form>
   )

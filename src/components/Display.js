@@ -1,6 +1,6 @@
 import React from 'react'
 
-const Display = ({ tipAmount, totalAmount, enableBtn, resetAll }) => {
+const Display = ({ tipAmount, totalAmount, enableBtn, reset }) => {
   return (
     <div className="card__output">
         <div className="card__amount">
@@ -24,7 +24,7 @@ const Display = ({ tipAmount, totalAmount, enableBtn, resetAll }) => {
             <button className="card__reset card__reset--enabled"
             onClick={(e)=> {
                 e.preventDefault();
-                resetAll(true);
+                reset();
             }}>
                 Reset
             </button> :

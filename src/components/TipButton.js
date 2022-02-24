@@ -1,14 +1,15 @@
 import React from 'react'
 
-const TipButton = ({content, changePercent}) => {
+const TipButton = ({id, content, getPercent,
+                    tipNumber, getTipNumber}) => {
 
   return (
     <button
-    className="card__tip-btn"
+    className={id === tipNumber ? "card__tip-btn card__tip-btn--clicked": "card__tip-btn"}
     onClick={(e)=> {
       e.preventDefault();
-      changePercent(content);
-      e.target.classList.toggle("card__tip-btn--clicked");
+      getPercent(content);
+      getTipNumber(id);
     }}>
         {content}%
     </button>
