@@ -81,8 +81,8 @@ body {
   width: 100%;
   padding: 0.6rem;
   font-size: 1rem;
-  font-family: SpaceMono;
-  color: #5e7a7d;
+  font-family: SpaceMonoB;
+  color: #00494d;
   text-align: end;
   background-color: #f4fafa;
   background-repeat: no-repeat;
@@ -91,6 +91,22 @@ body {
   border-radius: 0.2rem;
   border: none;
 }
+.card__form-bill:focus, .card__form-people:focus {
+  border: 0.1rem solid #26c0ab;
+  outline: none;
+}
+.card__form-bill::-moz-placeholder, .card__form-people::-moz-placeholder {
+  font-family: SpaceMono;
+  color: #7f9c9f;
+}
+.card__form-bill:-ms-input-placeholder, .card__form-people:-ms-input-placeholder {
+  font-family: SpaceMono;
+  color: #7f9c9f;
+}
+.card__form-bill::placeholder, .card__form-people::placeholder {
+  font-family: SpaceMono;
+  color: #7f9c9f;
+}
 .card__form-bill {
   background-image: url("../assets/images/icon-dollar.svg");
 }
@@ -98,10 +114,7 @@ body {
   background-image: url("../assets/images/icon-person.svg");
 }
 .card__form-people--error {
-  border: 0.1rem solid #d6765c;
-}
-.card__form-people:focus {
-  outline: none;
+  border: 0.1rem solid #d6765c !important;
 }
 .card__form-people-error {
   position: absolute;
@@ -134,9 +147,24 @@ body {
 }
 .card__tip-btn--custom {
   background-color: #f4fafa;
-  color: #5e7a7d;
+  color: #00494d;
   width: 100%;
-  text-align: center;
+  text-align: end;
+  padding-right: 0.6rem;
+  cursor: auto;
+}
+.card__tip-btn--custom:focus {
+  border: 0.1rem solid #26c0ab;
+  outline: none;
+}
+.card__tip-btn--custom::-moz-placeholder {
+  color: #5e7a7d;
+}
+.card__tip-btn--custom:-ms-input-placeholder {
+  color: #5e7a7d;
+}
+.card__tip-btn--custom::placeholder {
+  color: #5e7a7d;
 }
 .card__tip-btn--clicked {
   background-color: #26c0ab;
@@ -183,6 +211,9 @@ body {
   color: #00494d;
   border: none;
   border-radius: 0.2rem;
+}
+.card__reset:active {
+  background-color: #c5e4e7;
 }
 .card__reset--enabled {
   opacity: 1;
