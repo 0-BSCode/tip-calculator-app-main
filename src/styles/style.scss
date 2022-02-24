@@ -1,0 +1,187 @@
+@use 'colors';
+@use 'fonts';
+
+*,
+*::before,
+*::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    font-size: 24px;
+}
+
+body {
+    font-family: SpaceMono
+}
+
+.app {
+    min-height: 100vh;
+    background-color: colors.$lg-cyan;
+    display: grid;
+    grid-template-rows: 2fr 5fr 1fr;
+}
+
+.header {
+    align-self: center;
+    text-transform: uppercase;
+    text-align: center;
+    color: colors.$vdark-cyan;
+    font-size: 0.9rem;
+    letter-spacing: 0.3rem;
+
+    & span {
+        display: block;
+    }
+}
+
+.card {
+    background-color: white;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    column-gap: 2rem;
+    width: 34.4rem;
+    height: 18rem;
+    margin: auto;
+    padding: 1.3rem;
+    border-radius: 1.1rem;
+    box-shadow: 0rem 0.8rem 2rem -1rem colors.$dg-cyan;
+
+    &__form {
+        display: grid;
+        grid-template-rows: 1fr 2fr 1fr;
+    }
+
+    & label {
+        color: colors.$dg-cyan;
+        font-family: SpaceMonob;
+        font-size: 0.7rem;
+    }
+
+    &__form-bill,
+    &__form-people {
+        position: relative;
+        top: 0.2rem;
+        height: 2rem;
+        width: 100%;
+        padding: 0.6rem;
+        font-size: 1rem;
+        font-family: SpaceMono;
+        color: colors.$dg-cyan;
+        text-align: end;
+        background-color: colors.$lg-cyan2;
+        background-repeat: no-repeat;
+        background-size: 0.6rem;
+        background-position: 0.6rem;
+        border-radius: 0.2rem;
+        border: none;
+    }
+
+    &__form-bill {
+        background-image: url("../assets/images/icon-dollar.svg");
+    }
+
+    &__form-people {
+        background-image: url("../assets/images/icon-person.svg");
+    }
+
+    &__form-btns {
+        align-self: center;
+    }
+
+    &__tip-btns {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        grid-template-rows: 1fr 1fr;
+        grid-gap: 0.5rem;
+        height: 6rem;
+        padding: 0.8rem 0;
+        margin-top: -0.3rem;
+
+
+    }
+
+    &__tip-btn {
+        border: none;
+        background-color: colors.$vdark-cyan;
+        color: colors.$white;
+        font-size: 0.9rem;
+        font-family: SpaceMonoB;
+        border-radius: 0.2rem;
+        cursor: pointer;
+
+        &--custom {
+            background-color: colors.$lg-cyan2;
+            color: colors.$dg-cyan;
+            width: 100%;
+            text-align: center;
+        }
+    }
+
+    &__output {
+        background-color: colors.$vdark-cyan;
+        border-radius: 0.9rem;
+        padding: 1.5rem 1.3rem 1rem 1.3rem;
+    }
+
+    &__amount,
+    &__total {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    &__amount-txt,
+    &__total-txt {
+        font-size: 0.7rem;
+        font-family: SpaceMonoB;
+        color: colors.$white;
+
+        & span {
+            display: block;
+            font-size: 0.55rem;
+            color: colors.$dg-cyan2;
+        }
+    }
+
+    &__amount-money,
+    &__total-money {
+        font-size: 1.8rem;
+        font-family: SpaceMonoB;
+        color: colors.$strong-cyan;
+    }
+
+    &__total {
+        position: relative;
+        top: 1rem;
+    }
+
+    &__reset {
+        align-self: flex-end;
+        position: relative;
+        top: 5.5rem;
+        height: 1.8rem;
+        width: 100%;
+        background-color: colors.$strong-cyan;
+        text-transform: uppercase;
+        font-family: SpaceMonoB;
+        font-size: 0.7rem;
+        color: colors.$vdark-cyan;
+        border: none;
+        border-radius: 0.2rem;
+        opacity: 0.3;
+    }
+}
+
+.attribution { 
+    font-size: 0.5rem; 
+    text-align: center; 
+    align-self: end;
+}
+
+.attribution a { 
+    color: hsl(228, 45%, 44%); 
+}
+

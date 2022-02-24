@@ -1,0 +1,177 @@
+@font-face {
+  font-family: "SpaceMono";
+  src: url("../assets/fonts/SpaceMono-Regular.ttf");
+}
+@font-face {
+  font-family: "SpaceMonoB";
+  src: url("../assets/fonts/SpaceMono-Bold.ttf");
+}
+@font-face {
+  font-family: "SpaceMonoBI";
+  src: url("../assets/fonts/SpaceMono-BoldItalic.ttf");
+}
+@font-face {
+  font-family: "SpaceMonoI";
+  src: url("../assets/fonts/SpaceMono-Italic.ttf");
+}
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  font-size: 24px;
+}
+
+body {
+  font-family: SpaceMono;
+}
+
+.app {
+  min-height: 100vh;
+  background-color: #c5e4e7;
+  display: grid;
+  grid-template-rows: 2fr 5fr 1fr;
+}
+
+.header {
+  align-self: center;
+  text-transform: uppercase;
+  text-align: center;
+  color: #00494d;
+  font-size: 0.9rem;
+  letter-spacing: 0.3rem;
+}
+.header span {
+  display: block;
+}
+
+.card {
+  background-color: white;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  -moz-column-gap: 2rem;
+       column-gap: 2rem;
+  width: 34.4rem;
+  height: 18rem;
+  margin: auto;
+  padding: 1.3rem;
+  border-radius: 1.1rem;
+  box-shadow: 0rem 0.8rem 2rem -1rem #5e7a7d;
+}
+.card__form {
+  display: grid;
+  grid-template-rows: 1fr 2fr 1fr;
+}
+.card label {
+  color: #5e7a7d;
+  font-family: SpaceMonob;
+  font-size: 0.7rem;
+}
+.card__form-bill, .card__form-people {
+  position: relative;
+  top: 0.2rem;
+  height: 2rem;
+  width: 100%;
+  padding: 0.6rem;
+  font-size: 1rem;
+  font-family: SpaceMono;
+  color: #5e7a7d;
+  text-align: end;
+  background-color: #f4fafa;
+  background-repeat: no-repeat;
+  background-size: 0.6rem;
+  background-position: 0.6rem;
+  border-radius: 0.2rem;
+  border: none;
+}
+.card__form-bill {
+  background-image: url("../assets/images/icon-dollar.svg");
+}
+.card__form-people {
+  background-image: url("../assets/images/icon-person.svg");
+}
+.card__form-btns {
+  align-self: center;
+}
+.card__tip-btns {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: 1fr 1fr;
+  grid-gap: 0.5rem;
+  height: 6rem;
+  padding: 0.8rem 0;
+  margin-top: -0.3rem;
+}
+.card__tip-btn {
+  border: none;
+  background-color: #00494d;
+  color: white;
+  font-size: 0.9rem;
+  font-family: SpaceMonoB;
+  border-radius: 0.2rem;
+  cursor: pointer;
+}
+.card__tip-btn--custom {
+  background-color: #f4fafa;
+  color: #5e7a7d;
+  width: 100%;
+  text-align: center;
+}
+.card__output {
+  background-color: #00494d;
+  border-radius: 0.9rem;
+  padding: 1.5rem 1.3rem 1rem 1.3rem;
+}
+.card__amount, .card__total {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.card__amount-txt, .card__total-txt {
+  font-size: 0.7rem;
+  font-family: SpaceMonoB;
+  color: white;
+}
+.card__amount-txt span, .card__total-txt span {
+  display: block;
+  font-size: 0.55rem;
+  color: #7f9c9f;
+}
+.card__amount-money, .card__total-money {
+  font-size: 1.8rem;
+  font-family: SpaceMonoB;
+  color: #26c0ab;
+}
+.card__total {
+  position: relative;
+  top: 1rem;
+}
+.card__reset {
+  align-self: flex-end;
+  position: relative;
+  top: 5.5rem;
+  height: 1.8rem;
+  width: 100%;
+  background-color: #26c0ab;
+  text-transform: uppercase;
+  font-family: SpaceMonoB;
+  font-size: 0.7rem;
+  color: #00494d;
+  border: none;
+  border-radius: 0.2rem;
+  opacity: 0.3;
+}
+
+.attribution {
+  font-size: 0.5rem;
+  text-align: center;
+  align-self: end;
+}
+
+.attribution a {
+  color: #3e52a3;
+}/*# sourceMappingURL=style.css.map */
