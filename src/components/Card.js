@@ -10,35 +10,45 @@ const Card = () => {
   const [percent, setPercent] = useState('');
   const [people, setPeople] = useState('');
   const [tipAmount, setTip] = useState('0.00');
-  const [totalAmount, setTotal] = useState('0.00')
+  const [totalAmount, setTotal] = useState('0.00');
   const [updateDisplay, setUpdateStatus] = useState(1);
 
-  const calculateTip = (bill, percent, people) => {
+  const calculateOutput = (bill, percent, people) => {
+    console.log("Bill before: ", bill);
+    console.log("Percent before: ", percent);
+    console.log("People before: ", people);
+
     let Nbill = parseFloat(bill);
     let Npercent = Number(percent);
     let Npeople = Number(people);
 
+    console.log("Bill: ", Nbill);
+    console.log("Percent: ", Npercent);
+    console.log("People: ", Npeople);
+
     let tipAmt = Nbill * (Npercent / 100) / Npeople;
-    console.log("TIP: ", tipAmt);
+    let totalAmt = Nbill / Npeople + tipAmt;
 
-    return String(tipAmt.toFixed(2));
+    setTip(tipAmt.toFixed(2));
+    setTotal(totalAmt.toFixed(2));
+    // return String(tipAmt.toFixed(2));
   }
 
-  const calculateTotal = (tip, bill, people) => {
-    let Nbill = parseFloat(bill);
-    let Npeople = Number(people);
-    let Ntip = parseFloat(tip);
+  // const calculateTotal = (tip, bill, people) => {
+  //   let Nbill = parseFloat(bill);
+  //   let Npeople = Number(people);
+  //   let Ntip = parseFloat(tip);
 
-    let totalAmt = Nbill / Npeople + Ntip;
+  //   let totalAmt = Nbill / Npeople + Ntip;
 
-    return String(totalAmt.toFixed(2));
-  }
+  //   return String(totalAmt.toFixed(2));
+  // }
 
-  if (bill !== '' && percent !=='' && people !== '' && updateDisplay) {
-    setTip(()=>calculateTip(bill, percent, people));
-    setTotal(()=>calculateTotal(tipAmount, bill, people));
-    setUpdateStatus(0);
-  }
+  // if (bill !== '' && percent !=='' && people !== '' && updateDisplay) {
+  //   setTip(()=>calculateTip(bill, percent, people));
+  //   setTotal(()=>calculateTotal(tipAmount, bill, people));
+  //   setUpdateStatus(0);
+  // }
 
   /*
     TO-DO
@@ -58,10 +68,13 @@ const Card = () => {
         <Input 
         changeBill={setBill}
         changePercent={setPercent}
-        changePeople={setPeople}/>
+        changePeople={setPeople}
+        changeOutput={calculateOutput}
+        />
         <Output 
         tipAmount={tipAmount}
-        totalAmount={totalAmount}/>
+        totalAmount={totalAmount}
+        />
     </main>
   )
 }
