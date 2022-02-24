@@ -231,4 +231,15 @@ body {
 
 .attribution a {
   color: #3e52a3;
+}
+
+@media screen and (min-width: 1440px) {
+  :root {
+    font-size: 26px;
+  }
+}
+@media screen and (min-width: 768px) and (max-width: 1023px) {
+  :root {
+    font-size: 20px;
+  }
 }/*# sourceMappingURL=style.css.map */
