@@ -1,5 +1,4 @@
 import React from 'react'
-import {useState, useEffect} from 'react'
 import TipButton from './TipButton'
 import PeopleInput from './PeopleInput'
 import BillInput from './BillInput'

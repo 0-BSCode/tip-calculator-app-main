@@ -1,16 +1,17 @@
 import React from 'react'
-import {useState} from 'react'
 
-const PercentInput = ({ Percent, getPercent }) => {
+const PercentInput = ({ id, Percent, getPercent,
+                        tipNumber, getTipNumber }) => {
 
   return (
     <input
     className="card__tip-btn card__tip-btn--custom"
     type="text"
     placeholder="Custom"
-    value={isNaN(Percent) ? '': Percent}
+    value={isNaN(Percent) || id !== tipNumber ? '': Percent}
     onChange={(e) => {
-        getPercent(e.target.value);
+        getTipNumber(6);
+        getPercent(e.target.value === '' ? 'NaN': e.target.value);
     }}
     >
     </input>

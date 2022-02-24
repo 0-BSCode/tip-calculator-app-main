@@ -42,13 +42,9 @@ const Card = () => {
 
   /*
     TO-DO
-    1. Reset button
-    2. Responsive Design
-    3. Toggle buttons
-      - When one button = clicked, let all the others go back to normal color
-    4. Clean up components
-      - Losing track of which variables are for what components
-      - Centralize all variables to one component for easy tracking(?)
+    1. Responsive Design
+    2. Clean up components
+      - Form and Display can be further compartmentalized
   */
 
   useEffect(()=>{calculateOutput(bill, percent, people)});
