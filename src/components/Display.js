@@ -1,6 +1,6 @@
 import React from 'react'
 
-const Output = ({ tipAmount, totalAmount }) => {
+const Display = ({ tipAmount, totalAmount, enableBtn, resetAll }) => {
   return (
     <div className="card__output">
         <div className="card__amount">
@@ -8,7 +8,6 @@ const Output = ({ tipAmount, totalAmount }) => {
                 Tip Amount<span>/ person</span>
             </p>
             <p className="card__amount-money">
-                {/* $0.00 */}
                 ${tipAmount}
             </p>
         </div>
@@ -17,15 +16,25 @@ const Output = ({ tipAmount, totalAmount }) => {
                 Total<span>/ person</span>
             </p>
             <p className="card__total-money">
-                {/* $0.00 */}
                 ${totalAmount}
             </p>
         </div>
-        <button className="card__reset">
-            Reset
-        </button>
+        {
+            enableBtn ? 
+            <button className="card__reset card__reset--enabled"
+            onClick={(e)=> {
+                e.preventDefault();
+                resetAll(true);
+            }}>
+                Reset
+            </button> :
+            <button className="card__reset card__reset--disabled" disabled>
+                Reset
+            </button>            
+        }
+
     </div>
   )
 }
 
-export default Output
+export default Display

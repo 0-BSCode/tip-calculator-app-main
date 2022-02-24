@@ -8,6 +8,7 @@ const TipButton = ({content, changePercent}) => {
     onClick={(e)=> {
       e.preventDefault();
       changePercent(content);
+      e.target.classList.toggle("card__tip-btn--clicked");
     }}>
         {content}%
     </button>

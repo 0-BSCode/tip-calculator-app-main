@@ -54,6 +54,10 @@ body {
         grid-template-rows: 1fr 2fr 1fr;
     }
 
+    &__form-section {
+        position: relative;
+    }
+
     & label {
         color: colors.$dg-cyan;
         font-family: SpaceMonob;
@@ -85,6 +89,19 @@ body {
 
     &__form-people {
         background-image: url("../assets/images/icon-person.svg");
+
+        &--error {
+            border: 0.1rem solid colors.$red;
+        }
+    }
+
+    &__form-people-error {
+        position: absolute;
+        top: 0.4rem;
+        right: 0;
+        font-size: 0.6rem;
+        font-family: SpaceMonoB;
+        color: colors.$red;
     }
 
     &__form-btns {
@@ -117,6 +134,10 @@ body {
             color: colors.$dg-cyan;
             width: 100%;
             text-align: center;
+        }
+
+        &--clicked {
+            background-color: colors.$strong-cyan;
         }
     }
 
@@ -171,7 +192,15 @@ body {
         color: colors.$vdark-cyan;
         border: none;
         border-radius: 0.2rem;
-        opacity: 0.3;
+
+        &--enabled {
+            opacity: 1;
+            cursor: pointer;
+        }
+
+        &--disabled {
+            opacity: 0.3;
+        }
     }
 }
 

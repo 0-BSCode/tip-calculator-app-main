@@ -66,6 +66,9 @@ body {
   display: grid;
   grid-template-rows: 1fr 2fr 1fr;
 }
+.card__form-section {
+  position: relative;
+}
 .card label {
   color: #5e7a7d;
   font-family: SpaceMonob;
@@ -94,6 +97,17 @@ body {
 .card__form-people {
   background-image: url("../assets/images/icon-person.svg");
 }
+.card__form-people--error {
+  border: 0.1rem solid #d6765c;
+}
+.card__form-people-error {
+  position: absolute;
+  top: 0.4rem;
+  right: 0;
+  font-size: 0.6rem;
+  font-family: SpaceMonoB;
+  color: #d6765c;
+}
 .card__form-btns {
   align-self: center;
 }
@@ -120,6 +134,9 @@ body {
   color: #5e7a7d;
   width: 100%;
   text-align: center;
+}
+.card__tip-btn--clicked {
+  background-color: #26c0ab;
 }
 .card__output {
   background-color: #00494d;
@@ -163,6 +180,12 @@ body {
   color: #00494d;
   border: none;
   border-radius: 0.2rem;
+}
+.card__reset--enabled {
+  opacity: 1;
+  cursor: pointer;
+}
+.card__reset--disabled {
   opacity: 0.3;
 }
 
