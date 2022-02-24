@@ -100,6 +100,9 @@ body {
 .card__form-people--error {
   border: 0.1rem solid #d6765c;
 }
+.card__form-people:focus {
+  outline: none;
+}
 .card__form-people-error {
   position: absolute;
   top: 0.4rem;

@@ -12,6 +12,8 @@ const Input = ({className, value, changeValue, checkForZero}) => {
           changeValue(e.target.value);
           if (checkForZero && e.target.value === '0') {
             e.target.classList.add(className + "--error");
+          } else {
+            e.target.classList.remove(className + "--error");
           }
       }}></input>
 

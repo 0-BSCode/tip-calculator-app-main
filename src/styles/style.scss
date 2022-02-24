@@ -93,6 +93,10 @@ body {
         &--error {
             border: 0.1rem solid colors.$red;
         }
+
+        &:focus {
+            outline: none;
+        }
     }
 
     &__form-people-error {
