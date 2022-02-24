@@ -7,7 +7,7 @@ import React from 'react'
 const Card = () => {
 
   const [bill, setBill] = useState('');
-  const [percent, setPercent] = useState('');
+  const [percent, setPercent] = useState('NaN');
   const [people, setPeople] = useState('');
   const [tipAmount, setTip] = useState('0.00');
   const [totalAmount, setTotal] = useState('0.00');
@@ -37,6 +37,7 @@ const Card = () => {
     setBill('');
     setPercent('NaN');
     setPeople('');
+    setTipSelected(6);
   }
 
   /*
