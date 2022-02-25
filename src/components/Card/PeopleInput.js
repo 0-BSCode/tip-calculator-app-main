@@ -37,7 +37,6 @@ const PeopleInput = ({ People, getPeople }) => {
           Can't be zero
       </p>
     </>
-
   )
 }
 
