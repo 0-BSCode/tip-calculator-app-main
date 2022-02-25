@@ -11,6 +11,7 @@
 
 :root {
     font-size: 24px;
+    transition: all 0.2s;
 }
 
 body {
@@ -146,6 +147,7 @@ body {
 
         &--custom {
             background-color: colors.$lg-cyan2;
+            font-size: 1rem;
             color: colors.$vdark-cyan;
             width: 100%;
             text-align: end;
@@ -159,6 +161,7 @@ body {
 
             &::placeholder {
                 color: colors.$dg-cyan;
+                font-size: 0.9rem;
             }
         }
 
@@ -242,12 +245,13 @@ body {
 .attribution a { 
     color: colors.$vdark-cyan; 
     text-decoration: none;
-    transition: all 0.2s;
 
     &:hover {
         color: colors.$white;
     }
 }
+
+
 @media screen and (min-width: 1440px) {
     :root {
         font-size: 26px;

@@ -24,6 +24,7 @@
 
 :root {
   font-size: 24px;
+  transition: all 0.2s;
 }
 
 body {
@@ -152,6 +153,7 @@ body {
 }
 .card__tip-btn--custom {
   background-color: #f4fafa;
+  font-size: 1rem;
   color: #00494d;
   width: 100%;
   text-align: end;
@@ -164,12 +166,15 @@ body {
 }
 .card__tip-btn--custom::-moz-placeholder {
   color: #5e7a7d;
+  font-size: 0.9rem;
 }
 .card__tip-btn--custom:-ms-input-placeholder {
   color: #5e7a7d;
+  font-size: 0.9rem;
 }
 .card__tip-btn--custom::placeholder {
   color: #5e7a7d;
+  font-size: 0.9rem;
 }
 .card__tip-btn--clicked {
   background-color: #26c0ab;
@@ -239,7 +244,6 @@ body {
 .attribution a {
   color: #00494d;
   text-decoration: none;
-  transition: all 0.2s;
 }
 .attribution a:hover {
   color: white;
