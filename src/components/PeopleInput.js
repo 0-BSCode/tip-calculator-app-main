@@ -11,7 +11,9 @@ const PeopleInput = ({ People, getPeople }) => {
       value={People}
       onChange={(e) => {
         getPeople(e.target.value);
-        if (e.target.value === '0') {
+        console.log("Target value: ", e.target.value);
+        console.log("People value: ", People);
+        if (e.target.value === '0' || typeof People == 'undefined') {
           e.target.classList.add("card__form-people--error");
         } else {
           e.target.classList.remove("card__form-people--error");
