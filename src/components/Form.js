@@ -2,6 +2,7 @@ import React from 'react'
 import TipButton from './TipButton'
 import PercentInput from './PercentInput'
 import FormInput from './FormInput'
+import PeopleInput from './PeopleInput'
 
 const Form = ({ Bill, getBill, 
                 Percent, getPercent, 
@@ -25,6 +26,11 @@ const Form = ({ Bill, getBill,
             </div>
         </div>
         <FormInput content={"Number of People"} forBill={false} value={People} getValue={getPeople} />
+        {/* <div className="card__form-input">
+            <label>Number of People</label>
+            <br/>
+            <PeopleInput People={People} getPeople={getPeople} />
+        </div> */}
     </form>
   )
 }

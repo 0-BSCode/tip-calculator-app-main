@@ -124,6 +124,10 @@ body {
   font-size: 0.6rem;
   font-family: SpaceMonoB;
   color: #d6765c;
+  display: none;
+}
+.card__form-people-error--show {
+  display: block;
 }
 .card__form-btns {
   align-self: center;

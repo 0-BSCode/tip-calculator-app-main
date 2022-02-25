@@ -1,6 +1,23 @@
 import React from 'react'
+import {useState, useEffect} from 'react'
 
 const PeopleInput = ({ People, getPeople }) => {
+
+  const [value, setValue] = useState('');
+
+  useEffect(()=>{
+    console.log("People: ", People);
+    console.log("Value: ", value);
+    const peopleInput = document.querySelector(".card__form-people");
+    const errorPar = document.querySelector(".card__form-people-error");
+    if (People == 0 && value != '') {
+      peopleInput.classList.add("card__form-people--error");
+      errorPar.classList.add("card__form-people-error--show");
+    } else {
+      peopleInput.classList.remove("card__form-people--error");
+      errorPar.classList.remove("card__form-people-error--show");
+    }
+  });
 
   return (
     <>
@@ -11,23 +28,13 @@ const PeopleInput = ({ People, getPeople }) => {
       value={People}
       onChange={(e) => {
         getPeople(e.target.value);
-        console.log("Target value: ", e.target.value);
-        console.log("People value: ", People);
-        if (e.target.value === '0' || typeof People == 'undefined') {
-          e.target.classList.add("card__form-people--error");
-        } else {
-          e.target.classList.remove("card__form-people--error");
-        }
+        setValue(e.target.value);
       }}>
       </input>
-
-      {
-        People === '0' ? 
-        <p
-        className="card__form-people-error">
-            Can't be zero
-        </p>: ''
-      }
+      <p
+      className="card__form-people-error">
+          Can't be zero
+      </p>
     </>
 
   )

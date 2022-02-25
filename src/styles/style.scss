@@ -113,6 +113,12 @@ body {
         font-size: 0.6rem;
         font-family: SpaceMonoB;
         color: colors.$red;
+        display: none;
+
+        &--show {
+            display: block;
+        }
+
     }
 
     &__form-btns {

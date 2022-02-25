@@ -26,8 +26,6 @@ const Card = () => {
       setEnableReset(true);
     }
 
-    console.log("People: ", Npeople);
-
     let tipAmt = Nbill * (Npercent / 100) / Npeople;
     let totalAmt = Nbill / Npeople + tipAmt;
 
