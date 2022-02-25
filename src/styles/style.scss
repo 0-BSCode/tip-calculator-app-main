@@ -475,6 +475,10 @@ body {
                 &:focus {
                     border-width: 0.15rem;
                 }
+                
+                &::placeholder {
+                    font-size: 1.6rem;
+                }
             }
         }
 
@@ -596,6 +600,10 @@ body {
 
                 &:focus {
                     border-width: 0.15rem;
+                }
+
+                &::placeholder {
+                    font-size: 1.6rem;
                 }
             }
         }

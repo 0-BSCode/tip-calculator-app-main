@@ -454,6 +454,15 @@ body {
   .card__tip-btn--custom:focus {
     border-width: 0.15rem;
   }
+  .card__tip-btn--custom::-moz-placeholder {
+    font-size: 1.6rem;
+  }
+  .card__tip-btn--custom:-ms-input-placeholder {
+    font-size: 1.6rem;
+  }
+  .card__tip-btn--custom::placeholder {
+    font-size: 1.6rem;
+  }
   .card__output {
     display: grid;
     grid-template-rows: 1fr 1fr 1.3fr;
@@ -559,6 +568,15 @@ body {
   }
   .card__tip-btn--custom:focus {
     border-width: 0.15rem;
+  }
+  .card__tip-btn--custom::-moz-placeholder {
+    font-size: 1.6rem;
+  }
+  .card__tip-btn--custom:-ms-input-placeholder {
+    font-size: 1.6rem;
+  }
+  .card__tip-btn--custom::placeholder {
+    font-size: 1.6rem;
   }
   .card__output {
     display: grid;
