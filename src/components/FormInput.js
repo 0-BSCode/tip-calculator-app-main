@@ -10,7 +10,7 @@ const FormInput = ({content, forBill, value, getValue}) => {
         {
             forBill?
             <BillInput Bill={value} getBill={getValue} />:
-            <PeopleInput people={value} getPeople={getValue} />
+            <PeopleInput People={value} getPeople={getValue} />
         }
     </div>
   )

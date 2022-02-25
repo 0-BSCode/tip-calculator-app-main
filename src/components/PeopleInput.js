@@ -5,11 +5,12 @@ const PeopleInput = ({ People, getPeople }) => {
 
   const [value, setValue] = useState('');
 
+  // Rejects if input contains 0 or a string of 0's
   useEffect(()=>{
-    console.log("People: ", People);
-    console.log("Value: ", value);
     const peopleInput = document.querySelector(".card__form-people");
     const errorPar = document.querySelector(".card__form-people-error");
+    // People = 0 if input contains nothing or a string of zeroes
+    // Additional condition that value has something means it contains a string of zeroes
     if (People == 0 && value != '') {
       peopleInput.classList.add("card__form-people--error");
       errorPar.classList.add("card__form-people-error--show");
