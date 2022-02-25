@@ -231,7 +231,12 @@ body {
 }
 
 .attribution a {
-  color: #3e52a3;
+  color: #00494d;
+  text-decoration: none;
+  transition: all 0.2s;
+}
+.attribution a:hover {
+  color: white;
 }
 
 @media screen and (min-width: 1440px) {

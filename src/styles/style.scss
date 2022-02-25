@@ -235,7 +235,13 @@ body {
 }
 
 .attribution a { 
-    color: hsl(228, 45%, 44%); 
+    color: colors.$vdark-cyan; 
+    text-decoration: none;
+    transition: all 0.2s;
+
+    &:hover {
+        color: colors.$white;
+    }
 }
 @media screen and (min-width: 1440px) {
     :root {
