@@ -66,7 +66,7 @@ body {
   display: grid;
   grid-template-rows: 1fr 2fr 1fr;
 }
-.card__form-section {
+.card__form-input {
   position: relative;
 }
 .card label {
@@ -173,24 +173,27 @@ body {
 .card__output {
   background-color: #00494d;
   border-radius: 0.9rem;
-  padding: 1.5rem 1.3rem 1rem 1.3rem;
+  padding: 1.5rem 1.3rem 1.3rem 1.3rem;
+  display: grid;
+  grid-template-rows: 1fr 1fr 2fr;
 }
-.card__amount, .card__total {
+.card__money {
   display: flex;
   justify-content: space-between;
   align-items: center;
 }
-.card__amount-txt, .card__total-txt {
-  font-size: 0.7rem;
+.card__money-description {
+  font-size: 0.6rem;
+  letter-spacing: 0.05rem;
   font-family: SpaceMonoB;
   color: white;
 }
-.card__amount-txt span, .card__total-txt span {
+.card__money-description span {
   display: block;
-  font-size: 0.55rem;
+  font-size: 0.5rem;
   color: #7f9c9f;
 }
-.card__amount-money, .card__total-money {
+.card__money-txt {
   font-size: 1.8rem;
   font-family: SpaceMonoB;
   color: #26c0ab;
@@ -202,7 +205,6 @@ body {
 .card__reset {
   align-self: flex-end;
   position: relative;
-  top: 5.5rem;
   height: 1.8rem;
   width: 100%;
   background-color: #26c0ab;
@@ -337,15 +339,15 @@ body {
   .card__total {
     top: 0;
   }
-  .card__amount-txt, .card__total-txt {
+  .card__money-description {
     font-size: 1rem;
     letter-spacing: 0.05rem;
   }
-  .card__amount-txt span, .card__total-txt span {
+  .card__money-description span {
     font-size: 0.9rem;
     letter-spacing: 0rem;
   }
-  .card__amount-money, .card__total-money {
+  .card__money-txt {
     font-size: 2.3rem;
   }
   .card__reset {
@@ -443,15 +445,15 @@ body {
   .card__total {
     top: 0;
   }
-  .card__amount-txt, .card__total-txt {
+  .card__money-description {
     font-size: 1rem;
     letter-spacing: 0.05rem;
   }
-  .card__amount-txt span, .card__total-txt span {
+  .card__money-description span {
     font-size: 0.9rem;
     letter-spacing: 0rem;
   }
-  .card__amount-money, .card__total-money {
+  .card__money-txt {
     font-size: 2.3rem;
   }
   .card__reset {
@@ -549,15 +551,15 @@ body {
   .card__total {
     top: 0;
   }
-  .card__amount-txt, .card__total-txt {
+  .card__money-description {
     font-size: 1rem;
     letter-spacing: 0.05rem;
   }
-  .card__amount-txt span, .card__total-txt span {
+  .card__money-description span {
     font-size: 0.9rem;
     letter-spacing: 0rem;
   }
-  .card__amount-money, .card__total-money {
+  .card__money-txt {
     font-size: 2.3rem;
   }
   .card__reset {

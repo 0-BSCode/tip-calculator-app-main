@@ -1,5 +1,5 @@
 import Form from './Form'
-import Display from './Display'
+import Output from './Output'
 import {useState, useEffect} from 'react'
 import React from 'react'
 
@@ -40,12 +40,6 @@ const Card = () => {
     setTipSelected(6);
   }
 
-  /*
-    TO-DO
-    1. Clean up components
-      - Form and Display can be further compartmentalized
-  */
-
   useEffect(()=>{calculateOutput(bill, percent, people)});
 
   return (
@@ -61,7 +55,7 @@ const Card = () => {
         tipNumber={tipSelected}
         getTipNumber={setTipSelected}
         />
-        <Display 
+        <Output 
         tipAmount={tipAmount}
         totalAmount={totalAmount}
         enableBtn={enableReset}

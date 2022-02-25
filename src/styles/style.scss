@@ -54,7 +54,7 @@ body {
         grid-template-rows: 1fr 2fr 1fr;
     }
 
-    &__form-section {
+    &__form-input {
         position: relative;
     }
 
@@ -164,31 +164,31 @@ body {
     &__output {
         background-color: colors.$vdark-cyan;
         border-radius: 0.9rem;
-        padding: 1.5rem 1.3rem 1rem 1.3rem;
+        padding: 1.5rem 1.3rem 1.3rem 1.3rem;
+        display: grid;
+        grid-template-rows: 1fr 1fr 2fr;
     }
 
-    &__amount,
-    &__total {
+    &__money {
         display: flex;
         justify-content: space-between;
         align-items: center;
     }
 
-    &__amount-txt,
-    &__total-txt {
-        font-size: 0.7rem;
+    &__money-description {
+        font-size: 0.6rem;
+        letter-spacing: 0.05rem;
         font-family: SpaceMonoB;
         color: colors.$white;
 
         & span {
             display: block;
-            font-size: 0.55rem;
+            font-size: 0.5rem;
             color: colors.$dg-cyan2;
         }
     }
 
-    &__amount-money,
-    &__total-money {
+    &__money-txt {
         font-size: 1.8rem;
         font-family: SpaceMonoB;
         color: colors.$strong-cyan;
@@ -202,7 +202,6 @@ body {
     &__reset {
         align-self: flex-end;
         position: relative;
-        top: 5.5rem;
         height: 1.8rem;
         width: 100%;
         background-color: colors.$strong-cyan;
@@ -353,8 +352,7 @@ body {
             top: 0;
         }
 
-        &__amount-txt,
-        &__total-txt {
+        &__money-description {
             font-size: 1rem;
             letter-spacing: 0.05rem;
 
@@ -364,8 +362,7 @@ body {
             }
         }
 
-        &__amount-money,
-        &__total-money {
+        &__money-txt {
             font-size: 2.3rem;
         }
 
@@ -477,8 +474,7 @@ body {
             top: 0;
         }
 
-        &__amount-txt,
-        &__total-txt {
+        &__money-description {
             font-size: 1rem;
             letter-spacing: 0.05rem;
 
@@ -488,8 +484,7 @@ body {
             }
         }
 
-        &__amount-money,
-        &__total-money {
+        &__money-txt {
             font-size: 2.3rem;
         }
 
@@ -601,8 +596,7 @@ body {
             top: 0;
         }
 
-        &__amount-txt,
-        &__total-txt {
+        &__money-description {
             font-size: 1rem;
             letter-spacing: 0.05rem;
 
@@ -612,8 +606,7 @@ body {
             }
         }
 
-        &__amount-money,
-        &__total-money {
+        &__money-txt {
             font-size: 2.3rem;
         }
 
