@@ -42,8 +42,7 @@ const Card = () => {
 
   /*
     TO-DO
-    1. Responsive Design
-    2. Clean up components
+    1. Clean up components
       - Form and Display can be further compartmentalized
   */
 
