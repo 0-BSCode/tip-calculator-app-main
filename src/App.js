@@ -1,7 +1,6 @@
-import Header from './components/Header'
-import Card from './components/Card'
-import Footer from './components/Footer'
-import {useState, useEffect} from 'react'
+import Header from './components/Header/Header'
+import Card from './components/Card/Card'
+import Footer from './components/Footer/Footer'
 import './styles/style.css'
 
 function App() {
