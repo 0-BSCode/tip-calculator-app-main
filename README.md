@@ -33,8 +33,8 @@ Users should be able to:
 
 ### Links
 
-- Solution URL: [Add solution URL here](https://your-solution-url.com)
-- Live Site URL: [Add live site URL here](https://your-live-site-url.com)
+- Solution URL: [Github](https://github.com/Bry-cmd/tip-calculator-app-main)
+- Live Site URL: [Heroku](https://tip-calculator-app-bp.herokuapp.com/)
 
 ## My process
 
